@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "89503665091",
+    "firebase_url": "https://talktalk-555ee.firebaseio.com",
+    "project_id": "talktalk-555ee",
+    "storage_bucket": "talktalk-555ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89503665091:android:57beb2c6d3594c91",
+        "android_client_info": {
+          "package_name": "firebase.wooni.talkwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89503665091-efshfvofqeb7ru1vk72fn1drm4fevhm1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "firebase.wooni.talkwo",
+            "certificate_hash": "9a7ffc2589902f42d74522a8747f61ba0b481219"
+          }
+        },
+        {
+          "client_id": "89503665091-sc0m4tk5cpsscqkc6sgn8sfjdhvbbggq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSU53NbFoDgbOJpEdTIveGWkT4W11XqoM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89503665091-sc0m4tk5cpsscqkc6sgn8sfjdhvbbggq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
