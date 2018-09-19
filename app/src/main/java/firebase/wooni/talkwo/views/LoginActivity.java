@@ -126,6 +126,8 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onComplete(@Nullable DatabaseError databaseError, @android.support.annotation.NonNull DatabaseReference databaseReference) {
 
                                     if (databaseError == null) {
+                                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                        finish();
                                         Bundle eventBundle = new Bundle();
                                         eventBundle.putString("email", user.getEmail());
                                         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, eventBundle);
