@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager mViewPager;
 
+    ViewPagerAdapter mPageAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,13 +34,23 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mTabLayout.setupWithViewPager(mViewPager);
         setUpViewPager();
+
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment currentFragment = mPageAdapter.getItem(mViewPager.getCurrentItem());
+                    if (currentFragment instanceof FriendFragment){
+                       ((FriendFragment) currentFragment).toggleSearchbar();
+                    }
+            }
+        });
     }
 
     private void setUpViewPager() {
-        ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        pagerAdapter.addFragment(new ChatFragment(),"채팅");
-        pagerAdapter.addFragment(new FriendFragment(),"친구");
-        mViewPager.setAdapter(pagerAdapter);
+        mPageAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        mPageAdapter.addFragment(new ChatFragment(),"채팅");
+        mPageAdapter.addFragment(new FriendFragment(),"친구");
+        mViewPager.setAdapter(mPageAdapter);
 
     }
 

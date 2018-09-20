@@ -11,17 +11,17 @@
         android:orientation="horizontal"
         android:padding="5dp"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="45dp"
+        >
 
         <EditText
             android:id="@+id/edtContent"
             android:padding="5dp"
             android:layout_weight="7"
-            android:background="#fff"
             android:layout_width="0dp"
             android:inputType="textMultiLine"
             android:maxLines="1"
-            android:hint="친구 이메일 검색"
+            android:hint="@string/emailsearch"
             android:layout_height="match_parent"/>
 
         <Button
@@ -32,19 +32,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="찾기" />
+            android:text="@string/friendfind" />
+
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/friendRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
+
     </LinearLayout>
 
 </LinearLayout>
